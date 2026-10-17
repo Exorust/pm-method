@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 560" font-family="ui-sans-serif, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="14">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#475569"/>
+    </marker>
+    <marker id="r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#b91c1c"/>
+    </marker>
+    <marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#15803d"/>
+    </marker>
+  </defs>
+  <rect width="980" height="560" fill="#fff"/>
+
+  <!-- lanes -->
+  <rect x="20" y="20" width="940" height="300" rx="12" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="36" y="46" font-weight="700" fill="#0f172a">PM agent — decides what and judges whether. Never edits code.</text>
+  <rect x="20" y="340" width="940" height="200" rx="12" fill="#fff7ed" stroke="#fdba74"/>
+  <text x="36" y="366" font-weight="700" fill="#7c2d12">Builder agent — edits code only. Never edits pm/. Never weakens a check.</text>
+
+  <!-- PM boxes -->
+  <g stroke="#334155" fill="#fff">
+    <rect x="40" y="80" width="150" height="64" rx="8"/>
+    <rect x="230" y="80" width="150" height="64" rx="8"/>
+    <rect x="420" y="80" width="170" height="64" rx="8"/>
+    <rect x="630" y="80" width="150" height="64" rx="8"/>
+  </g>
+  <g fill="#0f172a" text-anchor="middle">
+    <text x="115" y="106" font-weight="600">1 · Interview</text>
+    <text x="115" y="126" font-size="12" fill="#475569">intent, not code</text>
+    <text x="305" y="106" font-weight="600">FEATURES.md</text>
+    <text x="305" y="126" font-size="12" fill="#475569">user approves scope</text>
+    <text x="505" y="106" font-weight="600">2 · Flows + Journeys</text>
+    <text x="505" y="126" font-size="12" fill="#475569">every step: observable result</text>
+    <text x="705" y="106" font-weight="600">3 · Walk live</text>
+    <text x="705" y="126" font-size="12" fill="#475569">obscura / CLI / curl</text>
+  </g>
+  <g stroke="#475569" stroke-width="1.6" fill="none" marker-end="url(#a)">
+    <path d="M190 112H228"/><path d="M380 112H418"/><path d="M590 112H628"/>
+  </g>
+
+  <!-- outcomes -->
+  <rect x="820" y="72" width="120" height="36" rx="18" fill="#dcfce7" stroke="#15803d"/>
+  <text x="880" y="95" text-anchor="middle" font-weight="600" fill="#14532d">solved</text>
+  <path d="M780 100 Q800 90 818 90" stroke="#15803d" stroke-width="1.6" fill="none" marker-end="url(#g)"/>
+  <text x="786" y="66" font-size="11" fill="#15803d">match + evidence</text>
+
+  <rect x="820" y="124" width="120" height="48" rx="8" fill="#fef9c3" stroke="#a16207"/>
+  <text x="880" y="143" text-anchor="middle" font-size="12" font-weight="600" fill="#713f12">reviewed,</text>
+  <text x="880" y="160" text-anchor="middle" font-size="12" font-weight="600" fill="#713f12">not verified</text>
+  <path d="M780 126 Q800 140 818 146" stroke="#a16207" stroke-width="1.4" fill="none" stroke-dasharray="4 3" marker-end="url(#a)"/>
+  <text x="722" y="170" font-size="11" fill="#a16207">can't run here → read the code instead;</text>
+  <text x="722" y="184" font-size="11" fill="#a16207">never upgraded to "solved"</text>
+
+  <!-- evidence / friction side notes -->
+  <g font-size="12" fill="#475569">
+    <rect x="420" y="200" width="170" height="44" rx="8" fill="#fff" stroke="#94a3b8" stroke-dasharray="4 3"/>
+    <text x="505" y="218" text-anchor="middle">pm/evidence/</text>
+    <text x="505" y="234" text-anchor="middle">screenshot or output per step</text>
+    <rect x="630" y="200" width="150" height="44" rx="8" fill="#fff" stroke="#94a3b8" stroke-dasharray="4 3"/>
+    <text x="705" y="218" text-anchor="middle">FRICTION.md</text>
+    <text x="705" y="234" text-anchor="middle">opinion only, never blocks</text>
+  </g>
+  <path d="M705 144V198" stroke="#94a3b8" stroke-dasharray="4 3" fill="none"/>
+  <path d="M680 144 Q600 170 540 198" stroke="#94a3b8" stroke-dasharray="4 3" fill="none"/>
+
+  <!-- STATUS -->
+  <rect x="230" y="200" width="150" height="64" rx="8" fill="#fff" stroke="#334155"/>
+  <text x="305" y="226" text-anchor="middle" font-weight="600" fill="#0f172a">5 · STATUS.md</text>
+  <text x="305" y="246" text-anchor="middle" font-size="12" fill="#475569">solved · blocked · r-n-v</text>
+  <path d="M940 90 H950 V300 H305 V266" stroke="#475569" stroke-width="1.4" fill="none" marker-end="url(#a)"/>
+  <text x="40" y="314" font-size="11" fill="#475569">all outcomes land in STATUS.md; nothing is committed</text>
+
+  <!-- fail path down to builder -->
+  <path d="M705 144 V395" stroke="#b91c1c" stroke-width="1.8" fill="none" marker-end="url(#r)"/>
+  <text x="716" y="262" font-size="12" font-weight="600" fill="#b91c1c">step ≠ expected</text>
+  <text x="716" y="278" font-size="12" fill="#b91c1c">or feature missing</text>
+
+  <rect x="630" y="400" width="150" height="64" rx="8" fill="#fff" stroke="#9a3412"/>
+  <text x="705" y="426" text-anchor="middle" font-weight="600" fill="#7c2d12">4 · Fix or build</text>
+  <text x="705" y="446" text-anchor="middle" font-size="12" fill="#9a3412">one attempt, uncommitted</text>
+
+  <!-- back up to re-walk -->
+  <path d="M630 432 H560 V150 H628" stroke="#475569" stroke-width="1.6" fill="none" marker-end="url(#a)"/>
+  <text x="446" y="436" font-size="12" fill="#475569">re-walk the flow</text>
+  <text x="446" y="452" font-size="12" fill="#475569">≤ 3 attempts</text>
+
+  <!-- blocked -->
+  <rect x="820" y="414" width="120" height="36" rx="18" fill="#fee2e2" stroke="#b91c1c"/>
+  <text x="880" y="437" text-anchor="middle" font-weight="600" fill="#7f1d1d">blocked</text>
+  <path d="M780 432H818" stroke="#b91c1c" stroke-width="1.6" fill="none" marker-end="url(#r)"/>
+  <text x="784" y="474" font-size="11" fill="#b91c1d">3rd failure → user decides</text>
+  <path d="M940 432 H950 V302" stroke="#475569" stroke-width="1.2" fill="none" stroke-dasharray="4 3"/>
+
+  <!-- scope limit note -->
+  <text x="40" y="500" font-size="12" fill="#7c2d12">Scope limit: the builder builds only features listed in the approved FEATURES.md. Nothing is added mid-run.</text>
+  <text x="40" y="520" font-size="12" fill="#7c2d12">Default model: Opus for both agents. The PM dispatches one builder per flow; parallel only when files are disjoint.</text>
+</svg>
